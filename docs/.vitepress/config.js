@@ -4,6 +4,9 @@ const config = {
   title: "C# LINQ Tutorial",
   head: [["link", { rel: "icon", href: "/csharp.png" }]],
   cleanUrls: true,
+  markdown: {
+    lineNumbers: true,
+  },
   themeConfig: {
     nav: [
       { text: "GitHub", link: "https://github.com/codeme254/csharp-linq" },
@@ -29,6 +32,10 @@ const config = {
       {
         text: "LINQ Operators",
         link: "/LINQ-Operators.md",
+      },
+      {
+        text: "Select",
+        link: "/Select.md",
       },
     ],
   },
