@@ -37,6 +37,10 @@ const config = {
         text: "Select",
         link: "/Select.md",
       },
+      {
+        text: "SelectMany",
+        link: "/SelectMany.md",
+      },
     ],
   },
 };
