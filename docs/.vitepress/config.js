@@ -41,6 +41,10 @@ const config = {
         text: "SelectMany",
         link: "/SelectMany.md",
       },
+      {
+        text: "Where",
+        link: "/Where.md",
+      },
     ],
   },
 };
