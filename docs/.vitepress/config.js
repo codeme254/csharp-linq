@@ -45,6 +45,10 @@ const config = {
         text: "Where",
         link: "/Where.md",
       },
+      {
+        text: "OfType",
+        link: "/OfType.md",
+      },
     ],
   },
 };
