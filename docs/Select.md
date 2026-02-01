@@ -1,4 +1,5 @@
 # Select
+
 LINQ Select operator allows us to specify what properties we want to retrieve. We need to specify whether we want to retrieve all or some of the properties in the Select Operator.
 
 We will be using the following Employee class to learn about the **Select** operator, we have 4 properties, ID, FirstName, LastName and Salary, we also have a Static
@@ -33,7 +34,9 @@ namespace SelectDemo
 ```
 
 ## Overview of How Select Works
+
 Select works as follows:
+
 - **Iteration**: The Select operator iterates over each element in the source sequence.
 - **Transformation**: For each element, it applies the transformation logic defined in the lambda expression.
 - **Result**: It produces a new sequence where each element is the result of the applied transformation on the corresponding element from the source sequence.
@@ -41,8 +44,10 @@ Select works as follows:
 **Deferred Execution**: An important aspect of the Select operator in LINQ is that it uses deferred execution. This means that the actual transformation of elements doesn’t happen when you define the Select call but when you iterate over the resulting sequence. This can be important for performance, especially with large data sets or complex queries.
 
 ## Selecting Elements Using `Select` With Both Query Syntax and Method Syntax
+
 Note that `Select` is lazy, it is not executed when we form the method, it is only executed when we use the query variable, in this case `employees` or `employees1`
 or when we use methods such as `ToList()`, `Sum()` e.t.c.
+
 ```C#
 using System;
 using System.Collections.Generic;
@@ -74,6 +79,7 @@ namespace SelectDemo
 ```
 
 ## Select a Single Property using LINQ Select
+
 In our previous example, we returned the data in its original form. What if we want to return a single property value?
 
 Let's select the employee IDs using both the query syntax and method syntax:
@@ -107,6 +113,7 @@ namespace SelectDemo
 ```
 
 ## Selecting a Few Properties
+
 Let's say we want to select only the Employee's FirstName, LastName and Salary properties.
 
 ```C#
@@ -149,6 +156,7 @@ namespace SelectDemo
 ```
 
 ## Selecting a Few Properties to a Different Class
+
 It is also possible to project or select the data to a different class using the LINQ Select Operator or Method. In our previous example, we have seen how to select a few properties (First Name, Last Name, and Salary properties) to the same class using the LINQ Select Projection Operator. Let us create a new class with the above three properties, and we will project the data to this class.
 
 ```C#

@@ -5,6 +5,7 @@ The LINQ OfType Operator in C# filters specific data from a data source based on
 This is useful when dealing with a non-generic IEnumerable or a collection of objects of various types.
 
 ## Example to Understand OfType Operator
+
 In the example below, we have a list that contains strings, integers and floats, we want to fetch only integers from the list:
 
 ```C#

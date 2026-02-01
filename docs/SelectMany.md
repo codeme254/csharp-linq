@@ -9,6 +9,7 @@ Imagine you have a list of objects, where each object contains a collection. You
 SelectMany is useful when working with a collection of collections e.g. a list of lists or an array of arrays.
 
 The SelectMany signature is as follows:
+
 ```
 SelectMany<TSource, TResult>(
     Func<TSource, IEnumerable<TResult>>
@@ -16,6 +17,7 @@ SelectMany<TSource, TResult>(
 ```
 
 ## Example to Understand SelectMany
+
 In the example below, we are using SelectMany to flatten the nested List as shown:
 
 ```C#
@@ -47,6 +49,7 @@ namespace SelectManyDemo
 ```
 
 ## LINQ SelectMany in Query Syntax
+
 There is no SelectMany operator in query syntax but we can work around this by writing multiple from clauses in the query:
 
 ```C#
@@ -143,6 +146,7 @@ namespace SelectManyDemo
 ```
 
 ## When to Use SelectMany
+
 - **Flattening nested collections**: If you have a collection of objects, each of which contains another collection, and you want to combine all the nested collections into a single flat collection, SelectMany is the right choice.
 - **Cross product or Cartesian product**: When you need to perform a cross join or Cartesian product between two sequences where each item from the first sequence is paired with every item of the second sequence. This is often used in scenarios where you want to combine elements from different sources.
 - **Querying multi-level hierarchies**: In scenarios where you have multi-level nested structures, and you want to retrieve items from a deeper level directly. For example, accessing grandchild elements in a tree-like structure.

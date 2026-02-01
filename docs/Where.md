@@ -5,6 +5,7 @@ The Where operator comes under filtering operators category in LINQ.
 Filtering is the process of getting only those elements from a data source that satisfy the given condition.
 
 Two methods provided by LINQ in C# are used for filtering are:
+
 - Where method
 - OfType method
 
@@ -19,6 +20,7 @@ It's important to note that the Where method uses deferred execution. This means
 :::
 
 ## Example to Understand the Where Operator
+
 In the example below, we have a list of number and we are using the Where operator to get all the numbers that are greater than 5:
 
 ```C#
@@ -36,7 +38,7 @@ namespace WhereDemo
 
             // Method Syntax
             IEnumerable<int> filterdData1 = numbers.Where(number => number > 5);
-            
+
             foreach(int num in filterdData1)
             {
                 Console.WriteLine(num);
@@ -58,6 +60,3 @@ namespace WhereDemo
 :::info
 The delegate that is passed to the Where function takes in two parameters, the first parameter is the element itself, the second parameter is the index of that element
 :::
-
-
-

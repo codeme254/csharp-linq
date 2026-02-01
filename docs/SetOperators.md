@@ -1,15 +1,17 @@
 # Set Operators
 
 LINQ Provides several set operators, these are:
+
 - **Distinct**: removes duplicates. `var uniqueNumbers = numbers.Distinct();`
 - **Union**: produces a sequence that contains the unique elements from two or more sequences. `var combinedData = collection1.Union(collection2);`
 - **Intersect**: produces a new sequence that includes all elements that exist in both of the source sequences. `var commonElements = collection1.Intersect(collection2);`
 - **Except**: Returns the elements from the first sequence that do not exist in the second sequence. `var uniqueItems = collection1.Except(collection2);`
 
 ## Distinct Set Operator
+
 The Distinct method in LINQ (Language Integrated Query) is a method used to remove duplicate elements from a collection. It’s commonly used when working with arrays, lists, or any other type of IEnumerable in .NET.
 
-In the example below, we have an integer list that contains duplicate values, we want to remove the duplicate values and return only the distinct ones, we 
+In the example below, we have an integer list that contains duplicate values, we want to remove the duplicate values and return only the distinct ones, we
 can use the distinct operator as shown:
 
 ```C#
@@ -48,6 +50,7 @@ namespace DistinctOperator
 ```
 
 ## Except Set Operator
+
 The Except method in LINQ (Language Integrated Query) for C# produces the set difference of two sequences. This method returns a new sequence containing elements from the first sequence that are not in the second sequence.
 
 In the example below, we have two integer lists, we are going to use the except method to return all the elements in the first list that are not there in the second list.
@@ -90,11 +93,13 @@ namespace ExceptMethod
     }
 }
 ```
+
 :::danger NOTE
 **The except method will throw an exception if any of the sequences is null**
 :::
 
 ## Intersect Set Operator
+
 The Intersect method in LINQ finds common elements between two sequences (collections).
 
 It’s useful when you need to compare two sets of data and find the elements that are present in both sets.
@@ -140,11 +145,13 @@ namespace IntersectMethod
     }
 }
 ```
+
 :::danger NOTE
 **The intersect method will throw an exception if any of the sequences are null.**
 :::
 
 ## Union Set Operator
+
 The union operator combines the elements from both sequences into a new sequence while removing duplicate elements.
 
 In the example below, we have two lists, we want to combine the elements from both sets while removing the duplicates, for this, we are going to use the
@@ -194,6 +201,7 @@ namespace UnionOperator
 :::
 
 ## The LINQ Concat Method
+
 The concat method can also be considered a set operator.
 
 The LINQ Concat Method in C# is used to concatenate two sequences into one sequence of the same type. It appends the elements of the second sequence to the end of the first sequence. That means it concatenates two of the same types of sequences or collections and returns a new sequence or collection without removing the duplicate elements.
