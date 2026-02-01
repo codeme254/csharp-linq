@@ -49,6 +49,10 @@ const config = {
         text: "OfType",
         link: "/OfType.md",
       },
+      {
+        text: "Set Operators",
+        link: "/SetOperators.md",
+      },
     ],
   },
 };
