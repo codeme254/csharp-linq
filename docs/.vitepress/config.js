@@ -8,6 +8,11 @@ const config = {
     lineNumbers: true,
   },
   themeConfig: {
+    logo: '/csharp.png',
+    // siteTitle: "LINQ Tutorial",
+    search: {
+      provider: 'local'
+    },
     nav: [
       { text: "GitHub", link: "https://github.com/codeme254/csharp-linq" },
       {
@@ -52,6 +57,10 @@ const config = {
       {
         text: "Set Operators",
         link: "/SetOperators.md",
+      },
+      {
+        text: "Ordering Operators",
+        link: "/ordering-operators.md",
       },
     ],
   },
