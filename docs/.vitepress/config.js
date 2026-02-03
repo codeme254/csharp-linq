@@ -62,6 +62,10 @@ const config = {
         text: "Ordering Operators",
         link: "/ordering-operators.md",
       },
+      {
+        text: "Aggregate Operators",
+        link: "/aggregate-operators.md",
+      },
     ],
   },
 };

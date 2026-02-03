@@ -20,3 +20,7 @@ LINQ can be used with several data sources, and there are different flavors of L
   by the Entity Data Model (EDM) through LINQ.
 - **LINQ to DataSet**: A part of the ADO.NET Entity Framework, LINQ to Entities allows querying data sources
   defined by the Entity Data Model (EDM) through LINQ.
+
+:::info NOTE
+All LINQ operators are available in `System.Linq` namespace
+:::
