@@ -66,6 +66,10 @@ const config = {
         text: "Aggregate Operators",
         link: "/aggregate-operators.md",
       },
+      {
+        text: "Quantifiers Operators",
+        link: "/quantifiers-operators.md",
+      },
     ],
   },
 };
