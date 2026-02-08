@@ -3,6 +3,7 @@
 LINQ Aggregate Operators perform mathematical operations on sequences of numeric data and are also used to compute a single value from a sequence of values. These operators are used to group together the values of multiple rows as the input and then return the output as a single value.
 
 The following are the aggregate methods provided by Linq to perform mathematical operations on a collection:
+
 - `Sum()`: This method calculates the collection's total(sum) value.
 - `Max()`: This method is used to find the largest value in the collection
 - `Min()`: This method is used to find the smallest value in the collection
@@ -11,11 +12,13 @@ The following are the aggregate methods provided by Linq to perform mathematical
 - `Aggregate()`: This method is used to Perform a custom aggregation operation on the values of a collection.
 
 ## Sum
+
 The Sum method in LINQ is a widely used aggregate function that calculates the sum of a sequence of numeric values.
 
 It can be applied to arrays, lists, or any other enumerable collections in .NET. The Sum method is available in various overloads, allowing you to sum up different numeric types such as int, double, decimal, etc., and even to sum up a specific numeric property in a collection of objects.
 
 ### Example to Understand the Sum Method
+
 In the following example, we are using the Sum method to calculate the sum of the given collection of numbers using both query syntax and method syntax:
 
 ```C#
@@ -46,6 +49,7 @@ namespace SumMethod
 ```
 
 ### Using the Sum Method With a Predicate
+
 We can also use the other overloaded version of the Sum method, which takes a Predicate as a parameter. Within that predicate, we can write the logic to filter the data.
 
 In the example below, we are finding the sum of all numbers that are greater than 50.
@@ -86,11 +90,13 @@ namespace SumMethod
 ```
 
 ### Sum Method With Complex Types
+
 The Sum method becomes even more powerful when you need to sum a specific property of objects in a collection.
 
 Let us see an example of using the LINQ Sum Method with Complex Type in C# using both Method and Query Syntax. We are going to work with the following Employee class. As you can see, it is a very simple Employee class with four properties: ID, Name, Salary, and Department. Here, we also created one method, i.e., GetAllEmployees(), which will return the list of all the employees, which will be our data source.
 
 :::code-group
+
 ```C# [Employee.cs]
 using System.Collections.Generic;
 namespace EmployeeData
@@ -123,6 +129,7 @@ namespace EmployeeData
     }
 }
 ```
+
 :::
 
 Now, our requirement is to calculate the Sum of the Salaries of all the Employees. The following example calculates the sum of all employees’ salaries using the LINQ Sum method with both Method and Query Syntax.
@@ -153,11 +160,13 @@ namespace SumMethod
 ```
 
 ## Max
+
 The LINQ Max method is used to find the maximum value in a collection.
 
-The Max method comes in various forms, allowing you to find the maximum value in different ways depending on the type of the collection and the data it contains. 
+The Max method comes in various forms, allowing you to find the maximum value in different ways depending on the type of the collection and the data it contains.
 
 ### Example to Understand the Max Method
+
 In the following example, we have a list of numbers, we want to find the max number among these numbers, for these, we will use the Max method:
 
 ```C#
@@ -175,7 +184,7 @@ namespace MaxMethod
             {
                 10, 30, 50, 40, 60, 20, 70, 90, 80, 100
             };
-            
+
             // Method syntax
             int max = numbers.Max();
             Console.WriteLine(max);
@@ -190,6 +199,7 @@ namespace MaxMethod
 ```
 
 ### Using the Max Method With a Predicate
+
 We can also use the other overloaded version of the Max method, which takes a Predicate as a parameter, and using the predicate, we can write the logic to filter the data.
 
 In the example below, we want to find the maximum number among the numbers that are less than 50.
@@ -230,9 +240,11 @@ namespace MaxMethod
 ```
 
 ### Max Method With Complex Types
+
 With the following employee class and the following employee data.
 
 :::code-group
+
 ```C# [Employee.cs]
 using System.Collections.Generic;
 namespace EmployeeData
@@ -265,9 +277,11 @@ namespace EmployeeData
     }
 }
 ```
+
 :::
 
 Say we want to find the highest salary, we can also use the Max method for this using both method and query syntax as shown:
+
 ```C#
 using System;
 using System.Collections.Generic;
@@ -292,11 +306,13 @@ namespace MaxMethod
 ```
 
 ## Min
+
 The LINQ Min method finds the smallest numeric value in a collection on which it is applied.
 
 The Min method comes in various forms, allowing you to find the minimum value in different ways depending on the type of the collection and the data it contains.
 
 ### Example to Understand the Min Method
+
 In the following example, we have a list of numbers and we want to find the smallest among these numbers, we will use the min method for that using both method and query syntax:
 
 ```C#
@@ -326,6 +342,7 @@ namespace MinMethod
 ```
 
 ### Using the Min Method With a Predicate
+
 We can also use the other overloaded version of the Min Extension method, which takes a Predicate as a parameter, and using the predicate, we can write the logic to filter the data.
 
 In the example below, we are finding the minimum among all numbers that are greater than 50:
@@ -366,9 +383,11 @@ namespace MinMethod
 ```
 
 ### Min Method With Complex Types
+
 With the following employee class and the employee data:
 
 :::code-group
+
 ```C# [Employee.cs]
 using System.Collections.Generic;
 namespace EmployeeData
@@ -401,6 +420,7 @@ namespace EmployeeData
     }
 }
 ```
+
 :::
 
 Say we want to find the lowest salary, we can use the Min method using both method and query syntax as shown:
@@ -429,9 +449,11 @@ namespace MinMethod
 ```
 
 ## Average
+
 The LINQ Average method computes the average value of a numeric collection or the average of a specific numeric property in a collection of complex objects.
 
 ### Example to Understand the Average Method
+
 In the example below, we have a list of integers and we would like to compute the average of the list, to do this, we will use the `Average` method as shown:
 
 ```C#
@@ -464,6 +486,7 @@ namespace AverageMethod
 Since Average returns a double data type, you could cast it to int or any other numeric data type, for example: `int avg = (int)numbers.Average()`
 
 ### Using the Average Method With a Predicate
+
 We can also use the other overloaded version of the Average method, which takes a Predicate as a parameter. Within that predicate, we can write the logic to filter the data.
 
 In the example below, we are finding the average of all numbers greater than 50:
@@ -504,9 +527,11 @@ namespace AverageMethod
 ```
 
 ### Average Method With Complex Types
+
 With the following employee data:
 
 :::code-group
+
 ```C# [Employee.cs]
 using System.Collections.Generic;
 namespace EmployeeData
@@ -539,6 +564,7 @@ namespace EmployeeData
     }
 }
 ```
+
 :::
 
 Say we want to compute average employees salary, we can do this using the query and method syntax as shown:
@@ -567,9 +593,11 @@ namespace AverageMethod
 ```
 
 ## Count
+
 The LINQ Count Method returns the number of elements present in the collection or the number of elements that have satisfied a given condition.
 
 ### Example to Understand the Count Method
+
 In the following example, we have a list of integers, we want to find how many integers we have, for this, we will use the Count method as shown:
 
 ```C#
@@ -599,6 +627,7 @@ namespace AddMethod
 ```
 
 ### Using the Count Method With a Predicate
+
 We can also use the other overloaded version of the Count method, which takes a Predicate as a parameter. Within that predicate, we can write the logic to filter the data.
 
 In the following example, we are using the count method with a predicate to count the number of elements that are greater than 40:
@@ -631,8 +660,10 @@ namespace AddMethod
 ```
 
 ### Count Method With Complex Types
+
 Given the following employee class and employee data:
 :::code-group
+
 ```C# [Employee.cs]
 using System.Collections.Generic;
 namespace EmployeeData
@@ -665,6 +696,7 @@ namespace EmployeeData
     }
 }
 ```
+
 :::
 
 We want to count the number of employees who work in IT, for this, we will use the count method as shown:

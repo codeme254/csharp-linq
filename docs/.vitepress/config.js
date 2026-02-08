@@ -8,10 +8,10 @@ const config = {
     lineNumbers: true,
   },
   themeConfig: {
-    logo: '/csharp.png',
+    logo: "/csharp.png",
     // siteTitle: "LINQ Tutorial",
     search: {
-      provider: 'local'
+      provider: "local",
     },
     nav: [
       { text: "GitHub", link: "https://github.com/codeme254/csharp-linq" },

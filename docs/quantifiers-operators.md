@@ -7,16 +7,19 @@ These operators can be applied to sequences to determine the presence or absence
 These operators return a Boolean value indicating whether the condition is true for any or all elements in the collection.
 
 Quantifier operators include:
+
 - **Any**: checks if any elements in a sequence satisfy a given condition. If at least one element meets the condition, it returns true; otherwise, it returns false. It can also be used without a condition to check if the sequence contains any elements at all.
 - **All**: determines whether all elements in a sequence satisfy a specified condition. It returns true if every element meets the condition and false if at least one element does not.
 - **Contains**: checks if the sequence contains a specific element. It can be used to determine if a sequence contains a particular value, returning true if the value is found and false otherwise.
 
 ## All Method
+
 The All method checks whether every element in a collection satisfies a given condition.
 
 It returns true if every element in the sequence satisfies the condition specified by the provided predicate or false if at least one element does not.
 
 ### Example to Understand the All Method
+
 In the example below, we have a list of integers and we want to check if all of them are greater than 10.
 
 :::info Note:
@@ -43,7 +46,7 @@ namespace AllMethod
             if(allGT10)
             {
                 Console.WriteLine("All numbers are greater than 10");
-            } 
+            }
             else
             {
                 Console.WriteLine("Not all numbers are greater than 10");
@@ -65,9 +68,11 @@ namespace AllMethod
 ```
 
 ### All Method With a Complex Type
+
 We are going to work with the following Student and Subject classes. So, create a class file with the name Student.cs and then copy and paste the following code. As you can see, the Student class has four properties: ID, Name, TotalMarks, and Subjects. Here, within the Student class, we have also created one method, i.e., GetAllStudnets(), which will return the list of all the students. The Subject class has only two properties, i.e., SubjectName and Marks.
 
 :::code-group
+
 ```C# [Student.cs]
 using System.Collections.Generic;
 namespace StudentData
@@ -131,6 +136,7 @@ namespace StudentData
     }
 }
 ```
+
 :::
 Our requirement is to check whether all students have total marks greater than 250, for this, we can use the All method using both method syntax and mixed syntax as shown:
 
@@ -201,15 +207,18 @@ namespace AllMethod
 ```
 
 ## Any Method
+
 It is used to check whether any sequence element satisfies a condition or if the sequence contains any elements when no condition is specified. If any of the elements satisfy the given condition, it returns true; otherwise, it returns false.
 
 It is useful for determining the existence of an element(s) that satisfies a condition without needing to iterate through the entire collection manually.
 
 The any method has two overloads:
+
 - **Any()**: checks if a sequence contains any elements at all. Does not require a condition, returns true if the sequence has at least one element, otherwise, it returns false.
 - **Any(predicate)**: This overload takes a predicate function as a parameter, representing the condition to check for the elements in the sequence. It returns true if at least one element in the sequence satisfies the condition specified by the predicate; otherwise, it returns false.
 
 ### Example to Understand the Any Method
+
 In the example below, we have a list of integers, we want to check whether the collection contains at least one integer that is greater than 50.
 
 :::info NOTE:
@@ -234,7 +243,7 @@ namespace AnyMethod
             bool anyGT50 = nums.Any(x => x > 50);
             Console.WriteLine(anyGT50);
 
-            anyGT50 = (from num in nums 
+            anyGT50 = (from num in nums
                        select num).Any(x => x > 50);
             Console.WriteLine(anyGT50);
         }
@@ -243,9 +252,11 @@ namespace AnyMethod
 ```
 
 ### Any Method With Complex Type
+
 We are going to work with the following Student and Subject classes. Create a class file named Student.cs and copy and paste the following code. As you can see, the Student class has four properties, i.e., ID, Name, TotalMarks, and Subjects. Here, within the Student class, we have also created one method, i.e., GetAllStudnets(), which will return the list of all the students. The Subject class has only two properties, i.e., SubjectName and Marks.
 
 :::code-group
+
 ```C# [Student.cs]
 using System.Collections.Generic;
 namespace StudentData
@@ -309,9 +320,10 @@ namespace StudentData
     }
 }
 ```
+
 :::
 
-Our requirement is to check whether any students have total marks greater than 250, for this, we can use the Any  method as shown:
+Our requirement is to check whether any students have total marks greater than 250, for this, we can use the Any method as shown:
 
 ```C#
 using System;
@@ -337,6 +349,7 @@ namespace AnyMethod
 ```
 
 ## Contains Method
+
 Used to check if a sequence contains a specific element.
 
 It returns a boolean value indicating whether the element exists in the sequence. The method returns a Boolean value: true if the element is found in the collection and false otherwise.
@@ -346,6 +359,7 @@ The Contains method is available in both `System.Collection.Generic` and `System
 :::
 
 ### Example to understand the Contains Method
+
 In the example below, we have a list of integers and we are using the contains method to check whether 33 exists using both method and query syntax:
 
 ```C#
