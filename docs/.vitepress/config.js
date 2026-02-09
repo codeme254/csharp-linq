@@ -70,6 +70,10 @@ const config = {
         text: "Quantifiers Operators",
         link: "/quantifiers-operators.md",
       },
+      {
+        text: "GroupBy",
+        link: "/GroupBy.md",
+      },
     ],
   },
 };
